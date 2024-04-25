@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\ExcelColumnsAPI\\ExcelColumns\\ExcelColumns\\Excel.csproj": {}
+    "D:\\GitHub\\PUBLIC\\ExcelColumnsAPI\\ExcelColumns\\ExcelColumns\\Excel.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\ExcelColumnsAPI\\ExcelColumns\\ExcelColumns\\Excel.csproj": {
+    "D:\\GitHub\\PUBLIC\\ExcelColumnsAPI\\ExcelColumns\\ExcelColumns\\Excel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\ExcelColumnsAPI\\ExcelColumns\\ExcelColumns\\Excel.csproj",
+        "projectUniqueName": "D:\\GitHub\\PUBLIC\\ExcelColumnsAPI\\ExcelColumns\\ExcelColumns\\Excel.csproj",
         "projectName": "Excel",
-        "projectPath": "D:\\GitHub\\ExcelColumnsAPI\\ExcelColumns\\ExcelColumns\\Excel.csproj",
+        "projectPath": "D:\\GitHub\\PUBLIC\\ExcelColumnsAPI\\ExcelColumns\\ExcelColumns\\Excel.csproj",
         "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\ExcelColumnsAPI\\ExcelColumns\\ExcelColumns\\obj\\",
+        "outputPath": "D:\\GitHub\\PUBLIC\\ExcelColumnsAPI\\ExcelColumns\\ExcelColumns\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

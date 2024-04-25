@@ -1,4 +1,4 @@
-using Excel.Repository;
+using Excel.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExcelColumns.Controllers
@@ -7,22 +7,24 @@ namespace ExcelColumns.Controllers
     [Route("[controller]")]
     public class ExcelController : ControllerBase
     {
-       private readonly ILogger<ExcelController> _logger;
+        private readonly ILogger<ExcelController> _logger;
+        private readonly IConvertColumn _convertColumn;
 
-        public ExcelController(ILogger<ExcelController> logger)
+        public ExcelController(ILogger<ExcelController> logger, IConvertColumn convertColumn)
         {
             _logger = logger;
+            _convertColumn = convertColumn;
         }
 
         [HttpGet("GetColumnLetterToColumnNumber")]
         public IActionResult GetColumnLetterToColumnNumber(string columnTitle)
         {
-            if (string.IsNullOrEmpty(columnTitle) )
+            if (string.IsNullOrEmpty(columnTitle))
             {
                 return BadRequest("Column Title can not be empty");
             }
 
-            var resultNumber = Tools.ConvertColumnLetterToColumnNumber(columnTitle);
+            var resultNumber = _convertColumn.ConvertColumnLetterToColumnNumber(columnTitle);
             return Ok(resultNumber);
         }
 
@@ -34,7 +36,7 @@ namespace ExcelColumns.Controllers
                 return BadRequest("Number Column must have a value");
             }
 
-            string resultValue = Tools.GetColumnNumberToTitleColumns(number);
+            string resultValue = _convertColumn.GetColumnNumberToTitleColumns(number);
             return Ok(resultValue);
         }
     }

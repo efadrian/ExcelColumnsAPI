@@ -1,9 +1,11 @@
-﻿namespace Excel.Repository
+﻿using Excel.Interface;
+
+namespace Excel.Repository
 {
-    public class Tools
+    public class ConvertColumn : IConvertColumn
     {
         //
-        public static int ConvertColumnLetterToColumnNumber(string columnTitle)
+        public int ConvertColumnLetterToColumnNumber(string columnTitle)
         {
 
             int resultNumber = 0;
@@ -20,7 +22,7 @@
         }
 
         //
-        public static string GetColumnNumberToTitleColumns(int number)
+        public string GetColumnNumberToTitleColumns(int number)
         {
             string resultValue = "";
             while (number > 0)
